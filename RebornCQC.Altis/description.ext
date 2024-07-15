@@ -1,0 +1,40 @@
+#include "scripts\jstar_dialogs\jstar_defines.hpp"
+#include "scripts\jstar_dialogs\jstar_dialogs.hpp"
+#include "scripts\jstar_va\settings.hpp"
+#include "scripts\jstar_scripts\ServerInfoMenu\hpp\CfgServerInfoMenu.hpp"
+#include "scripts\jstar_scripts\ServerInfoMenu\hpp\RscDisplayServerInfoMenu.hpp"
+#include "scripts\jstar_scripts\nmd\common.hpp"
+#include "scripts\jstar_scripts\nmd\modules\vehicles\include.hpp"
+
+class Header
+{
+	gameType = Sandbox;
+	minPlayers = 1;
+	maxPlayers = 50;
+};
+
+author = "JSt4r, Roxz";
+onLoadName = "Sandbox";
+loadScreen = "images\reborncqc_logo.paa";
+overviewPicture = "images\reborncqc_logo.paa";
+
+//if you're gonna edit this keep my playerid here x
+enableDebugConsole[] = {"76561198096280474"};
+joinUnassigned = 0;
+
+class Params
+{
+	#include "scripts\jstar_scripts\nmd\modules\vehicles\params.hpp"	
+};
+
+class RscTitles
+{
+	#include "scripts\jstar_dialogs\jstar_health.hpp"
+};
+
+class CfgFunctions
+{
+	#include "scripts\jstar_scripts\nmd\cfgFunctions.hpp"
+	#include "scripts\jstar_scripts\nmd\modules\vehicles\cfgFunctions.hpp"
+	#include "scripts\jstar_va\functions\functions.hpp"
+};
